@@ -1,0 +1,4 @@
+interface:
+  display_name: "A股诊股与持仓跟踪"
+  short_description: "A股早盘筛选、盘中复核、盘后预判、持仓技术跟踪与风险提示"
+  default_prompt: "Use $a-share-open-auction-selector to screen the A-share market, review open positions, and provide conditional triggers and risks."

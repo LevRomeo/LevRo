@@ -1,0 +1,27 @@
+{
+  "timezone": "Asia/Shanghai",
+  "hot_list_sources": {
+    "tonghuashun_verified_limit": 30,
+    "eastmoney_verified_limit": 100,
+    "universe": "union",
+    "priority_requires_both_sources": true,
+    "single_source_max_role": "follow_observe"
+  },
+  "max_focus_candidates": 3,
+  "moving_averages": [3, 5, 13, 20, 60],
+  "macd": {"fast": 12, "slow": 26, "signal": 9},
+  "trend_filters": {
+    "ma60": "observation_only",
+    "daily_macd": "observation_only",
+    "priority_tracking_requires": ["ma3_ma5_ma13_trend", "price_above_ma3_ma5", "dual_source_or_extra_confirmation", "volume_sector_announcement_confirmation"],
+    "follow_observe_when": ["ma60_unconfirmed_or_down", "daily_macd_unconfirmed_or_below_zero"]
+  },
+  "platform_lookback_days": [5, 10],
+  "report_times": ["09:55", "13:30", "18:00"],
+  "post_close_review": {
+    "time": "18:00",
+    "scope": ["morning_candidates", "user_positions", "post_close_announcements", "market_and_sector_sentiment", "hot_and_skyrocketing_samples"],
+    "next_trading_day_output": "conditional_watchlist"
+  },
+  "roles": ["priority_tracking", "follow_observe", "downgrade", "exit"]
+}
